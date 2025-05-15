@@ -37,143 +37,153 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-
-
-
-    <section>
-
-
-
-<!-- ...existing code... -->
-<head>
-  <!-- ...existing code... -->
-  <style>
-    .custom-slider-section {
-      display: flex;
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    .slider-left {
-      width: 50vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-    }
-    .slider-left h1 {
-      font-weight: bold;
-      font-size: 3vw;
-      text-align: center;
-      margin: 0;
-      color: #222;
-      letter-spacing: 2px;
-    }
-    .slider-right {
-      width: 50vw;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .slider-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      position: absolute;
-      transition: opacity 1s ease;
-      top: 0;
-      left: 0;
-    }
-    .slider-img.active {
-      opacity: 1;
-      position: relative;
-      z-index: 1;
-    }
-    @media (max-width: 991px) {
-      .custom-slider-section {
-        flex-direction: column;
-        height: auto;
-      }
-      .slider-left, .slider-right {
-        width: 100vw;
-        height: 40vh;
-      }
-      .slider-left h1 {
-        font-size: 6vw;
-      }
-    }
-  </style>
-  <!-- ...existing code... -->
-</head>
 <body>
   <div class="hero_area">
-    <!-- ...header section... -->
-
-    <!-- slider section personalizado -->
-    <section class="custom-slider-section">
-<div class="slider-left" style="flex-direction: column;">
-  <img src="img/logo.png" alt="Logo" style="max-width:180px; width:60%; height:auto; display:block; margin:0 auto 24px auto;">
-  <h2 style="margin-top:0;">Marianne Alonso</h2>
 
 
-  <div style="display: flex; gap: 20px; justify-content: center; align-items: center; margin-top: 20px;">
-    <a href="https://wa.me/17869446344" style="color: black; text-decoration: none;">
-      <i class="fa fa-phone" aria-hidden="true" style="font-size: 24px;"></i>
-    </a>
-    <a href="https://www.instagram.com/acmaraphotos__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="color: black; text-decoration: none;">
-      <i class="fa fa-instagram" aria-hidden="true" style="font-size: 24px;"></i>
-    </a>
-    <a href="mailto:acmaraphotos@gmail.com" style="color: black; text-decoration: none;">
-      <i class="fa fa-envelope" aria-hidden="true" style="font-size: 24px;"></i>
-    </a>
+
+
+
+<!-- ...INICIO FONDO PAREJA ===================================================================================... -->
+<div class="container-fluid p-0" style="height: 100vh; position: relative;">
+  <div 
+    class="w-100 h-100 fondo-pareja"
+    style="
+      background-image: url('img/pareja00.jpg');
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+    ">
+    <div 
+      class="position-absolute"
+      style="
+        top: 15%;
+        left: 15%;
+        transform: translateY(-50%);
+        z-index: 2;
+      ">
+      <img src="img/firma.svg" alt="Firma" style="max-width: 300px; width: 100%;">
+    </div>
   </div>
-
-
 </div>
-      <div class="slider-right">
-        <img src="img/hermanitos.jpg" class="slider-img active" alt="Imagen 1">
-        <img src="img/hermanitos1.jpg" class="slider-img" alt="Imagen 2">
-        <img src="img/hermanitos2.jpg" class="slider-img" alt="Imagen 3">
+
+<style>
+.fondo-pareja {
+  background-position: center;
+}
+
+@media (max-width: 576px) {
+  .fondo-pareja {
+    background-position: 80% center;
+  }
+}
+</style>
+
+<!-- ...INICIO FONDO PAREJA ===================================================================================... -->
+
+
+
+
+<!-- Incluye Bootstrap CSS en el SLYDER=========================================================================== -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-7 mb-4 mb-md-0">
+      <div id="sliderImagenes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner h-100" style="height: 450px;">
+          <div class="carousel-item active h-100">
+            <img src="img\pareja6.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="img\pareja7.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="img\pareja8.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 3">
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- end slider section personalizado -->
-
-    <!-- ...resto del contenido... -->
+    </div>
+    <!-- Texto a la derecha -->
+    <div class="col-md-5 text-center text-md-start">
+      <h2>Maternity Sessions</h2>
+      <p>
+        We capture the magic of motherhood and the love between couples, 
+        creating unique and heartfelt memories that celebrate life and special connections.
+      </p>
+    </div>
   </div>
-  <!-- ...existing code... -->
-  <script>
-    // Slider automático
-    const images = document.querySelectorAll('.slider-img');
-    let current = 0;
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 3000);
-  </script>
-  <!-- ...existing code... -->
-</body>
-<!-- ...existing code... -->
+</div>
+
+<style>
+  
+.object-fit-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.carousel-inner,
+.carousel-item {
+  height: 450px;
+}
+.carousel-item img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>
+
+<!-- Incluye Bootstrap JS antes de cerrar el body -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Forzar el inicio automático del slider y el intervalo de 2 segundos
+  var myCarousel = document.querySelector('#sliderImagenes');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 2000,
+    ride: 'carousel'
+  });
+</script>
+</div>
+<!-- Incluye Bootstrap CSS en el SLYDER=========================================================================== -->
 
 
 
-        
-    </section>
+  <!-- colash====================================================================================================== -->
 
 
+<!-- Collage de 3 imágenes y texto al lado -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-4 col-md-5 d-flex flex-column justify-content-center text-center">
+      <h2>Family and love in images</h2>
+        <p>
+          Treasure each family stage with photographs full of emotion. Let me create timeless memories for you.
+        </p>
+    </div>
+    <!-- Collage de imágenes (2/3 de la pantalla) -->
+    <div class="col-lg-8 col-md-7">
+      <div class="row g-2">
+        <!-- Fila superior: dos imágenes -->
+        <div class="col-6">
+          <img src="img/pareja3.jpg" class="img-fluid rounded" alt="Pareja 3">
+        </div>
+        <div class="col-6">
+          <img src="img/pareja4.jpg" class="img-fluid rounded" alt="Pareja 4">
+        </div>
+        <!-- Fila inferior: una imagen ocupando todo el ancho -->
+        <div class="col-12 mt-2">
+          <img src="img/pareja2.jpg" class="img-fluid rounded" alt="Pareja 5">
+        </div>
+      </div>
+    </div>
+    <!-- Texto (1/3 de la pantalla) -->
 
-    <!-- end slider section -->
   </div>
-
-  <!-- about section -->
+</div>
 
   <section class="about_section ">
     <div class="container-fluid">
