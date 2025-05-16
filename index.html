@@ -198,7 +198,7 @@ A tender glimpse into the magic and innocence of being a child.</p>
     </div>
   </div>
   <div class="row justify-content-center mb-2">
-    <div class="col-12 col-sm-6">
+    <div class="col-12 col-sm-8">
       <img src="img/valeria.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Valeria 1">
     </div>
   </div>
@@ -211,7 +211,32 @@ A tender glimpse into the magic and innocence of being a child.</p>
     </div>
   </div>
 </div>
-  <!-- colash====================================================================================================== -->
+<!-- Valeriaaaaa====================================================================================================== -->
+
+
+
+<div class="container py-4">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 class="h4 mb-2">Childhood Moments</h2>
+      <p class="mb-3">Childhood moments, forever captured.
+A tender glimpse into the magic and innocence of being a child.</p>
+    </div>
+  </div>
+  <div class="row justify-content-center mb-2">
+    <div class="col-12 col-sm-8">
+      <img src="img\hermanitos1.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Valeria 1">
+    </div>
+  </div>
+  <div class="row g-2 justify-content-center">
+    <div class="col-6 col-sm-4">
+      <img src="img\hermanitos.jpg" class="img-fluid rounded shadow-sm" alt="Valeria 2">
+    </div>
+    <div class="col-6 col-sm-4">
+      <img src="img\hermanitos2.jpg" class="img-fluid rounded shadow-sm" alt="Valeria 3">
+    </div>
+  </div>
+</div>
 
 
 
@@ -219,29 +244,77 @@ A tender glimpse into the magic and innocence of being a child.</p>
 
 
 
-    <div class="row justify-content-center g-3" style="max-width:900px; margin:auto;">
-      <div class="col-md-4 col-12 d-flex flex-column gap-3">
-        <div class="ratio ratio-1x1 mb-3">
-          <img src="img\a1.JPG" class="portfolio-img" alt="Imagen 1">
-        </div>
-        <div class="ratio ratio-1x1">
-          <img src="img\a2.JPG" class="portfolio-img" alt="Imagen 2">
-        </div>
-      </div>
-      <div class="col-md-4 col-12 d-flex flex-column gap-3">
-        <img src="img\a3.JPG" class="portfolio-img h-100" style="height: 540px; object-fit: cover;" alt="Imagen 3">
-      </div>
-      <div class="col-md-4 col-12 d-flex flex-column gap-3">
-        <div class="ratio ratio-1x1 mb-3">
-          <img src="img\a4.JPG" class="portfolio-img" alt="Imagen 4">
-        </div>
-        <div class="ratio ratio-1x1">
-          <img src="img\a7.JPG" class="portfolio-img" alt="Imagen 5">
+
+<!-- hermanitos ======================================================================================================= -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-5">
+  <div class="row align-items-center">
+
+    <div class="col-md-5 text-center text-md-start">
+      <h2>Maternity Sessions</h2>
+      <p>
+        We capture the magic of motherhood and the love between couples, 
+        creating unique and heartfelt memories that celebrate life and special connections.
+      </p>
+    </div>
+
+    <div class="col-md-7 mb-4 mb-md-0">
+      <div id="sliderImagenes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner h-100" style="height: 450px;">
+          <div class="carousel-item active h-100">
+            <img src="img\hermanitos.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="img\hermanitos2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="img\hermanitos1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 3">
+          </div>
         </div>
       </div>
     </div>
-   </section>
+    <!-- Texto a la derecha -->
 
+  </div>
+</div>
+
+<style>
+  
+.object-fit-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.carousel-inner,
+.carousel-item {
+  height: 450px;
+}
+.carousel-item img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>
+
+<!-- Incluye Bootstrap JS antes de cerrar el body -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Forzar el inicio automático del slider y el intervalo de 2 segundos
+  var myCarousel = document.querySelector('#sliderImagenes');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 2000,
+    ride: 'carousel'
+  });
+</script>
+</div>
+
+<!-- hermanitos ======================================================================================================= -->
 
 
 
